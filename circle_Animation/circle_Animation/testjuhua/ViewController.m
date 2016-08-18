@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-
+@property(nonatomic ,strong ) circleView *cview;
 
 @end
 
@@ -21,9 +21,24 @@
 
 - (void)viewDidLoad {
     
-    circleView *cview = [[circleView alloc]initWithcirclewithframe:CGRectMake(10, 10, 200, 200) withtext:@"wwwwww" withlinewidth:5 withcorlor:[UIColor redColor]];
+     _cview = [[circleView alloc]initWithcirclewithframe:CGRectMake(self.view.frame.size.width/2-100, self.view.frame.size.height/2-100, 200, 200) withtext:@"wwwwww" withlinewidth:5 withcorlor:[UIColor redColor]];
 
-    [self.view addSubview:cview];
+    [self.view addSubview:_cview];
+    
+    UIButton *but = [[UIButton alloc]init];
+    [but addTarget:self action:@selector(start) forControlEvents:UIControlEventTouchUpInside];
+    but.frame = CGRectMake( 30, 30, 80, 30);
+    but.backgroundColor = [UIColor redColor];
+    [self .view addSubview:but];
+    
+    
+    
+    UIButton *but1 = [[UIButton alloc]init];
+    [but1 addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+    but1.frame = CGRectMake( 30, 150, 80, 30);
+    but1.backgroundColor = [UIColor redColor];
+    [self .view addSubview:but1];
+    
     
 //    UILabel *label = [[UILabel alloc] init];
 //    label.text = @"测量完毕";
@@ -86,6 +101,12 @@
 
 }
 
+-(void)start{
+    [_cview start];
+}
 
+- (void)push{
+    [_cview end];
+}
 
 @end

@@ -15,5 +15,11 @@
 - (id)initWithcirclewithframe:(CGRect)labelframe withtext:(NSString *)text withlinewidth:(int)width withcorlor:(UIColor *)corlor;
 
 
+-(void)start;
+
+-(void)end;
+
+-(void)pause;
+
 
 @end

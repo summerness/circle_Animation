@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BBE1AF248B7E7D2E21C0B6FF003A8FE235ECE24D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BBE1AF248B7E7D2E21C0B6FF003A8FE235ECE24D" : 0,
+    "FD18C54154657014DEF511B48267D95D6541D96F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B475F0B1-BEBC-4862-9115-B6BEC4EDACBA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BBE1AF248B7E7D2E21C0B6FF003A8FE235ECE24D" : "baodan\/",
+    "FD18C54154657014DEF511B48267D95D6541D96F" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "宝蛋儿",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "宝蛋儿.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Peter0619\/baodan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BBE1AF248B7E7D2E21C0B6FF003A8FE235ECE24D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.oschina.net:GitPeter\/BaoDanApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FD18C54154657014DEF511B48267D95D6541D96F"
+    }
+  ]
+}

@@ -9,6 +9,7 @@
 #import "circleView.h"
 @interface circleView()
 
+@property (nonatomic , strong) CAGradientLayer *gl;
 
 
 @end
@@ -31,7 +32,7 @@
         CGPoint point = CGPointMake(label.frame.size.width/2, label.frame.size.width/2);
         
         //将贝塞尔曲线 调小一点点就好
-        UIBezierPath *p = [UIBezierPath bezierPathWithArcCenter:point radius:90.0f startAngle:.0f endAngle:M_PI clockwise:YES];
+        UIBezierPath *p = [UIBezierPath bezierPathWithArcCenter:point radius:90.0f startAngle:-0.5*M_PI endAngle:0.5*M_PI clockwise:YES];
         
         UIBezierPath *p1 = [UIBezierPath bezierPathWithArcCenter:point radius:90.0f startAngle:.0f endAngle:M_PI*2 clockwise:YES];
         
@@ -44,21 +45,19 @@
         backGroundLayer1.lineWidth = width;
         backGroundLayer1.frame = label.bounds;
         [label.layer addSublayer:backGroundLayer1];
-        
-        
-        CAGradientLayer *_gl = [CAGradientLayer layer];
+        _gl = [CAGradientLayer layer];
         _gl.frame = label.bounds;
         CAShapeLayer *backGroundLayer = [CAShapeLayer layer];
         backGroundLayer.fillColor = [UIColor clearColor].CGColor;
         backGroundLayer.strokeColor = [UIColor redColor].CGColor;
-        backGroundLayer.lineCap = kCALineCapRound;
-        backGroundLayer.lineJoin = kCALineJoinRound;
+        backGroundLayer.lineCap = kCALineCapSquare;
+        backGroundLayer.lineJoin = kCALineCapSquare;
         backGroundLayer.path = p.CGPath;
-        backGroundLayer.lineWidth = 10;
+        backGroundLayer.lineWidth = width;
         backGroundLayer.frame = _gl.bounds;
         
-        _gl.startPoint = CGPointMake(.0f, .5f);
-        _gl.endPoint = CGPointMake(1.f, .5f);
+        _gl.startPoint = CGPointMake(.5f, 1.f);
+        _gl.endPoint = CGPointMake(1.f, .1f);
         _gl.mask = backGroundLayer;
         
         //做出渐变色
@@ -70,17 +69,25 @@
         _gl.colors = colors;
         
         [label.layer addSublayer:_gl];
-        
-        
-        
-        CABasicAnimation *animate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-        animate.byValue = @(M_PI*2);
-        animate.duration = 3;
-        animate.repeatCount = MAXFLOAT;  
-        [_gl addAnimation:animate forKey:@"animate"];
-    }
+            }
     return self;
 }
+
+-(void)start{
+    CABasicAnimation *animate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    animate.byValue = @(M_PI*2);
+    animate.duration = 3;
+    animate.repeatCount = MAXFLOAT;
+    [_gl addAnimation:animate forKey:@"animate"];
+
+}
+
+- (void)end{
+    [_gl removeAllAnimations ];
+    
+}
+
+
 
 
 @end
