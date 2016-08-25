@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="headerimageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ga-9o-bbR">
+                        <rect key="frame" x="14" y="11" width="34" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="6jj-01-CQi"/>
+                            <constraint firstAttribute="height" constant="21" id="KkN-ih-YMM"/>
+                            <constraint firstAttribute="height" constant="21" id="S73-53-vNG"/>
+                            <constraint firstAttribute="width" constant="34" id="yfu-bm-pbG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="S73-53-vNG"/>
+                                <exclude reference="yfu-bm-pbG"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="order_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="mxF-8X-zyV">
+                        <rect key="frame" x="278" y="5" width="34" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="OnX-AJ-jpz"/>
+                            <constraint firstAttribute="width" constant="40" id="PmT-Nf-YTY"/>
+                            <constraint firstAttribute="width" constant="34" id="VdE-cG-zd6"/>
+                            <constraint firstAttribute="height" constant="34" id="XHI-tU-BlY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="17"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OnX-AJ-jpz"/>
+                                <exclude reference="PmT-Nf-YTY"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7ga-9o-bbR" secondAttribute="bottom" constant="11.5" id="0bh-jN-Nsk"/>
+                    <constraint firstAttribute="bottom" secondItem="mxF-8X-zyV" secondAttribute="bottom" constant="4.5" id="1f0-vf-CO3"/>
+                    <constraint firstAttribute="bottom" secondItem="mxF-8X-zyV" secondAttribute="bottom" constant="1.5" id="5BU-kV-88h"/>
+                    <constraint firstAttribute="trailing" secondItem="mxF-8X-zyV" secondAttribute="trailing" constant="32" id="EKP-ZT-VDA"/>
+                    <constraint firstAttribute="trailing" secondItem="mxF-8X-zyV" secondAttribute="trailing" constant="23" id="GCU-a6-ldT"/>
+                    <constraint firstItem="7ga-9o-bbR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="MeV-7L-3io"/>
+                    <constraint firstAttribute="trailing" secondItem="mxF-8X-zyV" secondAttribute="trailing" constant="16" id="QCn-8a-V8K"/>
+                    <constraint firstItem="mxF-8X-zyV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="UZx-Xt-Z3F"/>
+                    <constraint firstAttribute="bottom" secondItem="7ga-9o-bbR" secondAttribute="bottom" constant="11.5" id="euO-ec-Jvr"/>
+                    <constraint firstItem="7ga-9o-bbR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="fao-1Q-pLn"/>
+                    <constraint firstAttribute="trailing" secondItem="mxF-8X-zyV" secondAttribute="trailing" constant="16" id="gnU-fb-b4i"/>
+                    <constraint firstItem="mxF-8X-zyV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="irv-eG-crf"/>
+                    <constraint firstItem="mxF-8X-zyV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="qlh-eg-xBH"/>
+                    <constraint firstItem="7ga-9o-bbR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="zLS-re-8Vn"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="0bh-jN-Nsk"/>
+                        <exclude reference="fao-1Q-pLn"/>
+                        <exclude reference="5BU-kV-88h"/>
+                        <exclude reference="EKP-ZT-VDA"/>
+                        <exclude reference="GCU-a6-ldT"/>
+                        <exclude reference="QCn-8a-V8K"/>
+                        <exclude reference="UZx-Xt-Z3F"/>
+                        <exclude reference="gnU-fb-b4i"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerimg" destination="mxF-8X-zyV" id="xQJ-zO-HaC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="order_selected.png" width="30" height="30"/>
+    </resources>
+</document>
